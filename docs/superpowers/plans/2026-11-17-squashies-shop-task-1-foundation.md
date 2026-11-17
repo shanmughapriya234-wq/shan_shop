@@ -46,6 +46,7 @@ No product inputs or customer-facing behavior beyond the API health response are
 - Create: `frontend/app/globals.css`
 - Create: `frontend/public/.gitkeep`
 - Create: `frontend/next.config.ts`
+- Create: `frontend/next-env.d.ts`
 - Create: `frontend/package.json`
 - Create: `frontend/package-lock.json`
 - Create: `frontend/tsconfig.json`
@@ -60,7 +61,7 @@ No product inputs or customer-facing behavior beyond the API health response are
 
 - [ ] **Step 1: Write the failing API health test**
 
-Create `backend/tests/test_health.py` with `test_health_returns_ok`, importing `app` from `backend.app.main` and using FastAPI's `TestClient` to assert that `GET /health` returns status 200 and JSON `{"status": "ok"}`. Add `backend/app/__init__.py`, runtime requirements (`fastapi`, `uvicorn[standard]`) and development requirements (`pytest`, `httpx`, including the runtime requirements). Add `.gitignore` entries for `.venv/`, `node_modules/`, `.next/`, Python caches, and SQLite files.
+Create `backend/tests/test_health.py` with `test_health_returns_ok`, importing `app` from `backend.app.main` and using FastAPI's `TestClient` to assert that `GET /health` returns status 200 and JSON `{"status": "ok"}`. Add `backend/app/__init__.py`, runtime requirements (`fastapi`, `uvicorn[standard]`) and development requirements (`pytest`, `httpx2`, including the runtime requirements). Add `.gitignore` entries for `.venv/`, `node_modules/`, `.next/`, Python caches, and SQLite files.
 
 - [ ] **Step 2: Run the API test to verify it fails**
 
